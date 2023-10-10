@@ -1,16 +1,14 @@
 import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import FirstApp from './FirstApp';
+import { GifExpert } from "./GifExpertApp";
 
 function App() {
   return (
     <div className="App">
-      <React.StrictMode>
-        <FirstApp/>
-      </React.StrictMode>
+      <GifExpert />
     </div>
-  );
+  )
 }
 
 
