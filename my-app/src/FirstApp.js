@@ -12,10 +12,8 @@ const FirstApp = ( {value} ) => {
 
   return (
     <>
-      <h1>Counter</h1>
-      <span>{val}</span>
-      <button onClick={() => counterUp()}>+1</button>
-      <img src='https://media.tenor.com/7x4wdZSCH8wAAAAC/the-voices-abatukam.gif'></img>
+      <h1>Challenge 4</h1>
+      <span>10</span>
     </>
   );
 }
