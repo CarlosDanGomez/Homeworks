@@ -5,8 +5,12 @@ import React, { useState } from 'react';
 
 const FirstApp = ( {value} ) => {
   const [val, setVal] = useState(value);
-  const counterUp = () => {
-    setVal(val + 1);
+  const counterSubstract = () => {
+    setVal(val - 1);
+    console.log(val);
+  };
+  const counterReset = () => {
+    setVal(10);
     console.log(val);
   };
 
@@ -14,8 +18,8 @@ const FirstApp = ( {value} ) => {
     <>
       <h1>Counter</h1>
       <span>{val}</span>
-      <button onClick={() => counterUp()}>+1</button>
-      <img src='https://media.tenor.com/7x4wdZSCH8wAAAAC/the-voices-abatukam.gif'></img>
+      <button onClick={() => counterSubstract()}>-1</button>
+      <button onClick={() => counterReset()}> reset </button>
     </>
   );
 }
@@ -28,7 +32,7 @@ FirstApp.prototype = {
 FirstApp.defaultProps = {
   title: 'No hay titulo',
   sum: 300,
-  value: 0,
+  value: 10,
 };
 
 export default FirstApp;
