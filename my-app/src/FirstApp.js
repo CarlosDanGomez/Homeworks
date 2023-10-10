@@ -3,19 +3,30 @@ import './App.css';
 import Prototypes from 'prop-types';
 import React, { useState } from 'react';
 
-const FirstApp = ( {value} ) => {
-  const [val, setVal] = useState(value);
-  const counterUp = () => {
-    setVal(val + 1);
-    console.log(val);
+export const FirstApp = () => {
+  const [category, setCategory] = useState("");
+  const [categories, setCategori] = useState([]);
+  const handleEvent = (e) => {
+    setCategory(e.target.value);
   };
-
+  const AddCategory = () => {
+    setCategori((list) => [...list, category]);
+    setCategory("");
+  };
   return (
     <>
-      <h1>Counter</h1>
-      <span>{val}</span>
-      <button onClick={() => counterUp()}>+1</button>
-      <img src='https://media.tenor.com/7x4wdZSCH8wAAAAC/the-voices-abatukam.gif'></img>
+      <h1>Challenge 5 Categorias</h1>
+      <input
+        type="text"
+        value={category}
+        onChange={(event) => handleEvent(event)}
+      />
+      <button onClick={() => AddCategory()}>Añadir categoria</button>
+      <div>
+        {categories.map((category) => {
+          return <li> {category} </li>;
+        })}
+      </div>
     </>
   );
 }
