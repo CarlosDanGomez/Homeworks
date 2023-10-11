@@ -1,13 +1,13 @@
-import React from 'react';
+import { MultipleCustomHook } from "./components/MultipleCustomHooks";
 import './App.css';
 import Counter from "./counter";
 
 function App() {
   return (
     <div className="App">
-      <Counter value={0} />
+      <MultipleCustomHook />
     </div>
-  );
+  )
 }
 
 
