@@ -1,11 +1,10 @@
-import { MultipleCustomHook } from "./components/MultipleCustomHooks";
+import { Father } from "./Father";
 import './App.css';
-import Counter from "./counter";
 
 function App() {
   return (
     <div className="App">
-      <MultipleCustomHook />
+      <Father />
     </div>
   )
 }
