@@ -5,6 +5,10 @@ import React, { useState } from 'react';
 
 const FirstApp = ( {value} ) => {
   const [val, setVal] = useState(value);
+  const counterAdd = () => {
+    setVal(val + 1);
+    console.log(val);
+  };
   const counterSubstract = () => {
     setVal(val - 1);
     console.log(val);
@@ -18,6 +22,7 @@ const FirstApp = ( {value} ) => {
     <>
       <h1>Counter</h1>
       <span>{val}</span>
+      <button onClick={() => counterSubstract()}>+1</button>
       <button onClick={() => counterSubstract()}>-1</button>
       <button onClick={() => counterReset()}> reset </button>
     </>
