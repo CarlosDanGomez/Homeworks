@@ -1,14 +1,11 @@
-import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import FirstApp from './FirstApp';
+import Counter from "./counter";
 
 function App() {
   return (
     <div className="App">
-      <React.StrictMode>
-        <FirstApp/>
-      </React.StrictMode>
+      <Counter value={0} />
     </div>
   );
 }
