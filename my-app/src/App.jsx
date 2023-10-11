@@ -1,10 +1,10 @@
-import { Father } from "./Father";
+import { TodoApp } from "./components/TodoApp";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Father />
+      <TodoApp/>
     </div>
   )
 }

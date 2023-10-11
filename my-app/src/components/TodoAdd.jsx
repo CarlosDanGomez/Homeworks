@@ -11,7 +11,7 @@ export const TodoAdd = ({ onNewTodo }) => {
     event.preventDefault();
     const newTodo = {
       id: new Date().getTime(),
-      description: `Hacer el proyecto ${value}`,
+      description: `${value}`,
       done: false
     };
     onNewTodo(newTodo);
