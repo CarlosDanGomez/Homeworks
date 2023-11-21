@@ -1,27 +1,26 @@
-import React from "react";
-
-export const TodoItem = ({ todo, onRemove, onToggleDone }) => {
-  const handleRemove = () => {
-    onRemove(todo.id);
-  };
-
+export const TodoItem = ({ todo, onDelete, onToggleDone }) => {
   const handleToggleDone = () => {
     onToggleDone(todo.id);
+  };
+
+  const handleDelete = () => {
+    onDelete(todo.id);
   };
 
   return (
     <li className="list-group-item d-flex justify-content-between">
       <span
-        className={`align-self-center ${todo.done ? "completed" : "not-completed"}`}
+        className={todo.done ? "completed" : "not-completed"}
         onClick={handleToggleDone}
       >
         {todo.description}
       </span>
-      <button className="btn btn-warning" onClick={handleToggleDone}>
-        Hecho?
-      </button>
-      <button className="btn btn-danger" onClick={handleRemove}>
-        Borrar
+      <button
+        className="btn btn-danger"
+        style={{ backgroundColor: "red" }}
+        onClick={handleDelete}
+      >
+        Eliminar
       </button>
     </li>
   );

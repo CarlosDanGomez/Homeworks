@@ -1,8 +1,8 @@
-import { TodoAdd } from "./TodoAdd";
-import { TodoList } from "./TodoList";
+import { TodoAdd } from "../components/TodoAdd";
+import { TodoList } from "../components/TodoList";
 import { useTODO } from "../hooks/useTODO";
 
-export const TodoApp = () => {
+export const HomePage = () => {
   const {
     todos,
     handleNewTodo,

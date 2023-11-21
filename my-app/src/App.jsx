@@ -1,14 +1,10 @@
 import { TodoApp } from "./components/TodoApp";
-import './App.css';
+import "./styles.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <TodoApp/>
+      <TodoApp />
     </div>
-  )
+  );
 }
-
-
-
-export default App;

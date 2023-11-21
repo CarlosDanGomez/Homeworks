@@ -5,51 +5,41 @@ const initialState = [
   {
     id: new Date().getTime(),
     description: "Hacer los challenges",
-    done: false,
-  },
+    done: false
+  }
 ];
 
 export const useTODO = () => {
-  const [todos, dispatch] = useReducer(TodoReducer, initialState);
+  const [todos, dispach] = useReducer(TodoReducer, initialState);
 
   const handleNewTodo = (todo) => {
     const action = {
       type: "[TODO] ADD TODO",
-      payload: todo,
+      payload: todo
     };
-    dispatch(action);
+    dispach(action);
   };
 
-  const handleRemoveTodo = (todoId) => {
+  const handleDeleteTodo = (id) => {
     const action = {
-      type: "[TODO] REMOVE TODO",
-      payload: todoId,
+      type: "[TODO] DELETE TODO",
+      payload: id
     };
-    dispatch(action);
+    dispach(action);
   };
 
-  const handleToggleDone = (todoId) => {
+  const handleToggleDone = (id) => {
     const action = {
       type: "[TODO] TOGGLE DONE",
-      payload: todoId,
+      payload: id
     };
-    dispatch(action);
-  };
-
-  const countTodos = () => {
-    return todos.length;
-  };
-
-  const countPendingTodos = () => {
-    return todos.filter((todo) => !todo.done).length;
+    dispach(action);
   };
 
   return {
     todos,
     handleNewTodo,
-    handleRemoveTodo,
-    handleToggleDone,
-    countTodos,
-    countPendingTodos,
+    handleDeleteTodo,
+    handleToggleDone
   };
 };
