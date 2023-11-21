@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -22,9 +23,19 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <App />
   </Provider>
 >>>>>>> Stashed changes
-);
+=======
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import { UserProvider } from "./context/UserProvider";
+import { AppRoutes } from "./components/AppRoutes";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(
+  <Router>
+    <UserProvider>
+      <AppRoutes />
+    </UserProvider>
+  </Router>,
+  document.getElementById("root")
+>>>>>>> 87c53252ffb6d17601b351b7d6f95ab0d786c51b
+);
